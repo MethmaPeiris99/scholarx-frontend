@@ -9,6 +9,7 @@ import {
 import { Button, Col, Row, Space, Typography } from 'antd';
 
 import styles from './NavBar.css';
+import scholarXLogo from '../../../assets/scholarx-logo.png';
 import MenuDrawer from '../MenuDrawer/MenuDrawer';
 
 const { Text } = Typography;
@@ -20,10 +21,7 @@ const NavBar: React.FC = () => {
     <>
       <Row align={'middle'} justify={'start'}>
         <Col xs={20} md={2} lg={4} xl={4} xxl={4}>
-          <img
-            className={styles.navbarLogoContainer}
-            src="./scholarx-logo.png"
-          />
+          <img className={styles.navbarLogoContainer} src={scholarXLogo} />
         </Col>
         <AlignRightOutlined
           className={styles.menuIcon}
