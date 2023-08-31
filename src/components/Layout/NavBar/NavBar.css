@@ -46,7 +46,9 @@
 
 .navbarLogoContainer{
     width: 154px;
-    margin-top: 15px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .drawerLogoContainer{

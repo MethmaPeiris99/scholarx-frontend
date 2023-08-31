@@ -19,7 +19,7 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <Row align={'middle'} justify={'start'}>
+      <Row align={'middle'} justify={'start'} style={{ padding: '0 7%' }}>
         <Col xs={20} md={2} lg={4} xl={4} xxl={4}>
           <img className={styles.navbarLogoContainer} src={scholarXLogo} />
         </Col>
