@@ -1,0 +1,41 @@
+.mentorProfileContainer{
+    padding: 4% 10%;
+}
+
+.primaryTitle{
+    font-family: -apple-system, SanFranciscoText, sans-serif;
+    letter-spacing: 0.8px;
+    color: #1D1D1F;
+    font-size: 50px;
+    font-weight: 900
+}
+
+.tertiaryTitle{
+    font-family: -apple-system, SanFranciscoText, sans-serif;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mentorProfileText{
+    font-family: -apple-system, SanFranciscoText, sans-serif;
+    font-weight: 300;
+}
+
+.applyButton{
+    justify-content: center;
+    width: 154px;
+    height: 35px;
+    font-family: -apple-system, SanFranciscoText, sans-serif;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.mentorStoryCard{
+    width: 270px;
+    height: 360px;
+}
+
+.antIcon{
+    font-size: 20px;
+}
