@@ -1,7 +1,4 @@
 import React from 'react';
-
-import { Row, Col } from 'antd';
-
 import { type Mentor } from '../../types';
 import MentorCard from '../MentorCard/MentorCard.component';
 
@@ -10,11 +7,11 @@ interface ListProps {
 }
 
 export const MentorList: React.FC<ListProps> = ({ mentors }: ListProps) => (
-  <Row gutter={[16, 16]}>
+  <div className='grid grid-cols-4 gap-4'>
     {mentors?.map((mentor) => (
-      <Col key={mentor.mentor_id} xs={24} sm={12} md={8} lg={6}>
+      <div key={mentor.mentor_id}>
         <MentorCard mentor={mentor} />
-      </Col>
+      </div>
     ))}
-  </Row>
+  </div>
 );
