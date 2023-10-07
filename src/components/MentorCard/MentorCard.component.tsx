@@ -1,41 +1,31 @@
 import React from 'react';
-
-import { UserOutlined } from '@ant-design/icons';
-import { Typography, Avatar, Card } from 'antd';
-
-import styles from './MentorCard.module.css';
 import { type Mentor } from '../../types';
-
-const { Title, Text } = Typography;
 
 interface MentorCardProps {
   mentor: Mentor;
 }
 
 const MentorCard: React.FC<MentorCardProps> = ({ mentor }) => (
-  <Card className={styles.cardContainer}>
+  <div className='w-52 border flex flex-col items-center p-6 rounded-md'>
     {mentor.profile.image_url !== null ? (
-      <Avatar
-        src={mentor.profile.image_url}
-        size={100}
-        className={styles.avatarContainer}
+      <div
+        className='w-24 h-24 border-2 border-blue-500 rounded-full mb-2'
       />
     ) : (
-      <Avatar
-        icon={<UserOutlined />}
-        size={100}
-        className={styles.avatarContainer}
+      <div
+        className='w-24 h-24 border-2 border-blue-500 rounded-full mb-2'
       />
     )}
-    <div className={styles.avatarContainer}>
-      <Title level={5} className={styles.title}>
+    <div>
+      <p className='font-bold text-center'>
         {mentor.profile.first_name} {mentor.profile.last_name}
-      </Title>
-      <Text>{mentor.application.designation}</Text>
-      <br />
-      <Text type="secondary">{mentor.application.company_or_institution}</Text>
+      </p>
+      <div className='text-center mt-4'>
+        <p>{mentor.application.designation}</p>
+        <p className='text-gray-500'>{mentor.application.company_or_institution}</p>
+      </div>
     </div>
-  </Card>
+  </div>
 );
 
 export default MentorCard;
