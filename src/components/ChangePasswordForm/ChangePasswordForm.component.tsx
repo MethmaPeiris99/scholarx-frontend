@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Form, Input } from 'antd';
 
 interface ChangePasswordFormProps {
   onSubmit: (props: {
@@ -11,62 +10,50 @@ interface ChangePasswordFormProps {
 
 const ChangePasswordForm: React.FC<ChangePasswordFormProps> = () => {
   return (
-    <Form
+    <form
       name="change_password"
-      layout="vertical"
-      initialValues={{ remember: true }}
-      wrapperCol={{ span: 14 }}
+      className="space-y-4 max-w-lg mx-auto"
       autoComplete="off"
     >
-      <Form.Item<string>
-        label="Current Password"
-        name="current_password"
-        rules={[
-          { required: true, message: 'Current Password cannot be empty!' },
-        ]}
-      >
-        <Input.Password />
-      </Form.Item>
+      <div className="w-full">
+        <label className="block text-gray-700 mb-2">Current Password</label>
+        <input
+          type="password"
+          name="current_password"
+          required
+          className="block w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+        />
+      </div>
 
-      <Form.Item<string>
-        label="New Password"
-        name="new_password"
-        rules={[
-          { required: true, message: 'New Password cannot be empty!' },
-          { min: 8, message: 'Password must be at least 8 characters long' },
-        ]}
-      >
-        <Input.Password />
-      </Form.Item>
+      <div className="w-full">
+        <label className="block text-gray-700 mb-2">New Password</label>
+        <input
+          type="password"
+          name="new_password"
+          required
+          className="block w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+        />
+      </div>
 
-      <Form.Item<string>
-        label="Confirm New Password"
-        name="confirm_new_password"
-        dependencies={['new_password']}
-        rules={[
-          { required: true, message: 'Confirm New Password cannot be empty!' },
-          ({ getFieldValue }) => ({
-            async validator(_, value: string) {
-              if (value === '' || getFieldValue('new_password') === value) {
-                await Promise.resolve();
-                return;
-              }
-              return await Promise.reject(
-                new Error("The two passwords don't match")
-              );
-            },
-          }),
-        ]}
-      >
-        <Input.Password />
-      </Form.Item>
+      <div className="w-full">
+        <label className="block text-gray-700 mb-2">Confirm New Password</label>
+        <input
+          type="password"
+          name="confirm_new_password"
+          required
+          className="block w-full border rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+        />
+      </div>
 
-      <Form.Item>
-        <Button type="primary" htmlType="submit">
+      <div className="w-full">
+        <button
+          type="submit"
+          className="bg-blue text-white rounded-md py-2 px-4"
+        >
           Submit
-        </Button>
-      </Form.Item>
-    </Form>
+        </button>
+      </div>
+    </form>
   );
 };
 
