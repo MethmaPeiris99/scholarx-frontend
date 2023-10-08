@@ -14,9 +14,9 @@ interface EditProfileFormProps {
 }
 
 const EditProfileForm: React.FC<EditProfileFormProps> = () => {
-  return(
-    <div className='grid grid-cols-2 gap-10'>
-      <form autoComplete='off'>
+  return (
+    <div className="grid grid-cols-2 gap-10">
+      <form autoComplete="off">
         <div className="w-full mb-4">
           <label className="block text-gray-700 mb-2">First Name</label>
           <input
@@ -64,23 +64,28 @@ const EditProfileForm: React.FC<EditProfileFormProps> = () => {
         </div>
 
         <div className="w-full">
-        <button
-          type="submit"
-          className="bg-blue text-white rounded-md py-2 px-6"
-        >
-          Save
-        </button>
-      </div>
+          <button
+            type="submit"
+            className="bg-blue text-white rounded-md py-2 px-6"
+          >
+            Save
+          </button>
+        </div>
       </form>
 
       <div className="w-24 h-24 border-2 border-blue-500 rounded-full flex flex-col items-center justify-center ml-10 mt-6">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path d="M12 4.5v15m7.5-7.5h-15" />
         </svg>
         <p>Upload</p>
       </div>
-
     </div>
   );
-}
+};
 export default EditProfileForm;

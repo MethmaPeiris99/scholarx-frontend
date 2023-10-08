@@ -7,7 +7,7 @@ interface ListProps {
 }
 
 export const MentorList: React.FC<ListProps> = ({ mentors }: ListProps) => (
-  <div className='grid grid-cols-4 gap-4'>
+  <div className="grid grid-cols-4 gap-4">
     {mentors?.map((mentor) => (
       <div key={mentor.mentor_id}>
         <MentorCard mentor={mentor} />
